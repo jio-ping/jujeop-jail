@@ -1,7 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap");
+
 .frame {
-  background: url("./bonggu.jpg") no-repeat;
-  background-size: cover;
-  width: 150px;
-  height: 200px;
+  font-family: "Nanum Myeongjo", serif;
+
+  background: url("./src/bonggu.jpg");
+  background-clip: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  box-sizing: border-box;
+  width: 500px;
+  position: relative;
   font-size: 19px;
+  .name {
+    width: 100%;
+    font-size: 50px;
+    top: 5%;
+    left: 10%;
+    position: absolute;
+  }
+  .jujeop {
+    position: absolute;
+  }
+  .long {
+    bottom: 35%;
+  }
+  & img {
+    width: 500px;
+  }
 }
