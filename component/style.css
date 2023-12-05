@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap");
+
+.wrapper {
+  width: 300px;
+  height: 100%;
+  position: relative;
+  font-family: "Nanum Myeongjo", serif;
+  .bias {
+    background: url(./../test-src/yejun.JPG);
+    width: 250px;
+    height: 380px;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  & img {
+    width: 250px;
+    height: 100%;
+    position: relative;
+  }
+  .jujeop {
+    position: absolute;
+    z-index: 10;
+  }
+  .name {
+    font-size: 1.5rem;
+    top: 13px;
+    display: flex;
+    /* background:red; */
+    width: 100%;
+    justify-content: space-evenly;
+    white-space: inherit;
+  }
+}
