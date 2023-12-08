@@ -11,7 +11,7 @@ function showNameJujeop(name) {
   let longJujeop = {
     0: `만물이 당신을 위해 존재하는 걸 아십니까? \n | yes |    | 예 |`,
     1: `존재만 해도 공기정화 유해물질 제거 나의 피톤치드`,
-    2: `넌 정말 멋진 아이구나 ~? `,
+    2: `정말<br />멋진아이<br />구나~? `,
     3: `그 얼굴이면 열심히 안 살아도 되지 않아요?`,
   };
   let num = ~~(Math.random() * jujeopDB.length);
@@ -25,3 +25,8 @@ function showTypeJujeop(type, type_emoji) {
     0: `${type_emoji} 말랑콩떡 아기 ${type}❤️${type_emoji} `,
   };
 }
+
+//frame color
+const FRAME = {
+  red: `./src/red-frame`,
+};
