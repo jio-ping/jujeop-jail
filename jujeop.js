@@ -5,7 +5,7 @@ function showNameJujeop(name) {
     1: ` ${name} 땜에 전쟁 났어요. 아름다워(war), 귀여워(war), 사랑스러워(war)`,
     2: `${name} 좋아하지마.\n- 그게 뭔데\n- ${name} 좋아하지 말라고\n- 그거 어떻게 하는 건데`,
     3: `오늘부로 ${name}지지를 철회한다. \n오늘부터 지지관계에서 벗어나 ${name}과 나는 한몸으로 일체가된다\n ${name}에 대한 공격은 나에대한 공격으로 간주한다`,
-    4: `${name}의 효능: 관절염 손목터널증후군 요통 폐럼 감기 예방효과 \n 의사가 가장 겁내하는 ${name}`,
+    4: `${name}의 효능: \n칼슘,비타민A,B,C, 아미노산 합유\n`,
   };
 
   let longJujeop = {
@@ -30,3 +30,4 @@ function showTypeJujeop(type, type_emoji) {
 const FRAME = {
   red: `./src/red-frame`,
 };
+//복숭아에 환불이 어딨어
