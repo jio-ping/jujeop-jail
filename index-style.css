@@ -1,10 +1,10 @@
 body {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
+  height: 100vh;
 }
 .frame {
-  margin: auto;
-  width: 300px;
-  height: 100%;
+  width: 25%;
+
+  display: flex;
+  flex-flow: column norepeat;
+  justify-content: center;
 }

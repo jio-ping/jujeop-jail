@@ -4,34 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>내 최애 주접프레임에 가둬 😭</title>
-    <script src="./jujeop.js"></script>
+    <link rel="stylesheet" href="./index-style.css" />
+    <script src="./jujeopDB.js" defer></script>
+    <script src="./control.js" defer></script>
   </head>
   <body>
-    <h1>주접프레임</h1>
-
     <div class="frame">
+      <h1>주접프레임</h1>
       <form action="" method="get ">
         <input type="file" accept="image/*" />
-        <input type="text" placeholder="내 최애 이름은 " />
-
-        <div class="concept">
+        <span
+          >세로 프레임에 맞게 최애의 세로길이가 긴 사진을 업로드 해주세요
+          🎶</span
+        >
+        <label for="">최애의 이름</label>
+        <input type="text" placeholder="성 " />
+        <input type="text" placeholder="이름" />
+        <div class="bias_concept">
           <span>내 최애는 </span>
-          <div class="my_bias_color">
-            <button class="blue">💙</button>
-            <button class="purple">💜</button>
-            <button class="pink">💓</button>
-            <button class="red">❤️</button>
-            <button class="black">🖤</button>
-            <button class="yellow">💛</button>
-            <button class="green">💚</button>
+          <div class="bias_color">
+            <button id="color" class="blue">💙</button>
+            <button id="color" class="purple">💜</button>
+            <button id="color" class="pink">💖</button>
+            <button id="color" class="red">❤️</button>
+            <button id="color" class="black">🖤</button>
+            <button id="color" class="yellow">💛</button>
+            <button id="color" class="green">💚</button>
           </div>
-          <div class="my_bias_type">
-            <button class="dog">🐶</button>
-            <button class="cat">🐱</button>
-            <button class="dolphin">🐬</button>
-            <button class="rabbit">🐰</button>
-            <button class="hamster">🐹</button>
-            <button class="lion">🦁</button>
+          <div class="bias_type">
+            <button value="강아지">🐶</button>
+            <button value="고양이">🐱</button>
+            <button value="토끼">🐰</button>
+            <button value="햄스터">🐹</button>
+            <button value="병아리">🐥</button>
+            <button value="복숭아">🍑</button>
+            <button value="딸기">🍓</button>
+            <button value="귤">🍊</button>
+            <button value="포도">🍇</button>
+            <button value="체리">🍒</button>
+            <button value="레몬">🍋</button>
           </div>
         </div>
         <button>최애 프레임 만들기</button>
