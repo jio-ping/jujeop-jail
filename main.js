@@ -19,6 +19,28 @@ function getName() {
 
 firstName.addEventListener("input", getName);
 lastName.addEventListener("input", getName);
+
+// 프레임 색상 선택
+/*const frameColor = document.querySelector("#color");
+function getFrame(e) {
+  console.log(e.target);
+  let color = e.target.closest("button");
+  console.log(e);
+  frameColor.addEventListener("click", getFrame);
+
+}*/
+
+const frameList = document.querySelectorAll(".color");
+const frame = document.querySelector("#frame");
+function getFrame(e) {
+  biasInfo["color"] = e.target.value;
+  console.group(e.target.value);
+  frame.src = `./../src/${e.target.id}-frame.png`;
+}
+for (let frame of frameList) {
+  frame.addEventListener("click", getFrame);
+}
+
 //form class type에 있는
 const moehList = document.querySelectorAll(".moeh");
 const getMoeh = (e) => {
@@ -29,8 +51,5 @@ const getMoeh = (e) => {
 for (let moeh of moehList) {
   moeh.addEventListener("click", (e) => getMoeh(e));
 }
-
-//프레임함수
-function getFrame(e) {}
 
 //모든 항목이 포함되어야!!!!!!! 만들수있음
