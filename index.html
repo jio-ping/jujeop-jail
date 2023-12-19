@@ -3,58 +3,123 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>내 최애 주접프레임에 가둬 😭</title>
-    <link rel="stylesheet" href="./index-style.css" />
+    <title>내 최애 칭찬감옥에 가둬 😭</title>
+
     <link rel="icon" type="image/x-icon" href="/src/favicon.svg" />
-    <script src="./jujeopDB.js" defer></script>
-    <script src="./control.js" defer></script>
+
+    <script src="./component/background.js" defer></script>
+    <script src="./main.js" defer></script>
+    <script src="./getJujeop.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./component/frame-style.css" />
   </head>
-  <body>
+  <body class="body">
     <div class="frame">
-      <h1>주접프레임</h1>
-      <form action="" method="get ">
-        <div class="photo-form">
-          <input type="file" accept="image/*" />
-          <span
-            >세로 프레임에 맞게 최애의 세로길이가 긴 사진을 업로드 해주세요
-            🎶</span
+      <h1>주 접 프 레 임</h1>
+
+      <div class="photo-form">
+        <form action="">
+          <input
+            id="photo"
+            class="'upload-photo"
+            accept=".jpg, .jpeg, .png"
+            type="file"
+            accept="image/*"
+            placeholder="최애의 사진을 업로드 해주세요"
+          />
+          <p>세로 프레임에 맞게 최애의 세로길이가 긴 사진을 추천합니다👀</p>
+        </form>
+      </div>
+      <div class="name">
+        <label>최애의 이름</label>
+        <div>
+          <input
+            autocomplete="off"
+            id="lastname"
+            class="name-input"
+            type="text"
+            placeholder="성 "
+          />
+          <input
+            autocomplete="off"
+            id="firstname"
+            class="name-input"
+            type="text"
+            placeholder="이름"
+          />
+        </div>
+      </div>
+      <div class="concept">
+        <div id="color">
+          <p>프레임 색상</p>
+          <button type="button" class="color is-active" id="blue" value="💙">
+            💙
+          </button>
+          <button type="button" class="color" id="purple" value="💜">💜</button>
+          <button type="button" class="color" id="pink" value="💖">💖</button>
+          <button type="button" class="color" id="white" value="🖤">🤍</button>
+          <button type="button" class="color" id="yellow" value="💛">💛</button>
+          <button type="button" class="color" id="green" value="💚">💚</button>
+        </div>
+        <div class="type">
+          <p>최애 닮은꼴</p>
+          <button type="button" class="moeh" data-name="갱쥐" value="🐶">
+            🐶
+          </button>
+          <button type="button" class="moeh" data-name="고양이" value="🐱">
+            🐱
+          </button>
+          <button type="button" class="moeh" data-name="토끼" value="🐰">
+            🐰
+          </button>
+          <button type="button" class="moeh" data-name="햄찌" value="🐹">
+            🐹
+          </button>
+          <button
+            type="button"
+            class="moeh is-active"
+            data-name="병아리"
+            value="🐥"
           >
+            🐥
+          </button>
+          <button type="button" class="moeh" data-name="복숭아" value="🍑">
+            🍑
+          </button>
+          <button type="button" class="moeh" data-name="딸기" value="🍓">
+            🍓
+          </button>
+          <button type="button" class="moeh" data-name="귤" value="🍊">
+            🍊
+          </button>
+          <button type="button" class="moeh" data-name="포도" value="🍇">
+            🍇
+          </button>
+          <button type="button" class="moeh" data-name="체리" value="🍒">
+            🍒
+          </button>
+          <button type="button" class="moeh" data-name="레몬" value="🍋">
+            🍋
+          </button>
         </div>
+      </div>
+      <button id="submit" class="submit">만들기</button>
 
-        <div class="info-form">
-          <label for="">최애의 이름</label>
-          <input id="lastname" type="text" placeholder="성 " />
-          <input id="firstname" type="text" placeholder="이름" />
+      <!--결과창  -->
+      <div class="wrapper">
+        <h2>여러분 제 최애를 보십시오</h2>
+        <div class="bias">
+          <span id="biasName" class="jujeop"></span>
+          <span id="jujeopSymbol" class="jujeop"></span>
+          <span id="jujeopLong1" class="jujeop"></span>
+          <span id="jujeopLong2" class="jujeop"></span>
+          <span id="jujeopLong3" class="jujeop"></span>
+          <span id="whyCute" class="jujeop"></span>
 
-          <div class="concept">
-            <form class="color">
-              <span>프레임 색상 :</span>
-              <input type="button" class="color" id="blue" value="💙" />
-              <input type="button" class="color" id="purple" value="💜" />
-              <input type="button" class="color" id="pink" value="💖" />
-              <input type="button" class="color" id="red" value="❤️" />
-              <input type="button" class="color" id="black" value="🖤" />
-              <input type="button" class="color" id="yellow" value="💛" />
-              <input type="button" class="color" id="green" value="💚" />
-            </form>
-            <form class="type">
-              <label> 내 최애는 아무래도 ... </label>
-              <input type="button" class="moeh" value="🐶" />
-              <input type="button" class="moeh" value="🐱" />
-              <input type="button" class="moeh" value="🐰" />
-              <input type="button" class="moeh" value="🐹" />
-              <input type="button" class="moeh" value="🐥" />
-              <input type="button" class="moeh" value="🍑" />
-              <input type="button" class="moeh" value="🍓" />
-              <input type="button" class="moeh" value="🍊" />
-              <input type="button" class="moeh" value="🍇" />
-              <input type="button" class="moeh" value="🍒" />
-              <input type="button" class="moeh" value="🍋" />
-            </form>
-          </div>
+          <span class="jujeop protect-symbol"></span>
         </div>
-        <button>최애 프레임 만들기</button>
-      </form>
+        <img id="frame" src="./../src/purple-frame.png" alt="" />
+      </div>
     </div>
   </body>
 </html>
