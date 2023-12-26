@@ -1,14 +1,18 @@
 {
   "name": "jujeop",
   "version": "1.0.0",
-  "description": "| 내 최애 최고야 칭찬감옥에 가둬버려 😈",
-
+  "description": " 내 최애 최고야 칭찬감옥에 가둬버려 😈",
+  "type": "commonjs",
   "scripts": {
     "dev": "live-server --host=localhost --port=1029 --no-browser"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "josa-js": "^0.0.2",
     "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "html-to-image": "^1.11.11"
   }
 }

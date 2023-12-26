@@ -1,3 +1,5 @@
+import { setJujeop } from "./getJujeop.js";
+
 const lastName = document.querySelector("#lastname");
 const firstName = document.querySelector("#firstname");
 const submit = document.querySelector("#submit");
@@ -52,7 +54,7 @@ function setEmoji(e) {
   emojiList.forEach((li) => li.classList.remove("is-active"));
   emoji.classList.add("is-active");
   biasInfo["emojiName"] = e.target.dataset.name;
-  biasInfo["emojiName"] = e.target.value;
+  biasInfo["emoji"] = e.target.value;
 }
 
 const result = document.querySelector("#result");

@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap");
+
+.wrapper {
+  margin: auto;
+
+  height: 100%;
+  position: relative;
+  font-family: "Nanum Myeongjo", serif;
+
+  /* 프레임 */
+  & img {
+    width: 300px;
+    height: 455px;
+    position: relative;
+  }
+}
+.bias {
+  width: 300px;
+  height: 456px;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.jujeop {
+  position: absolute;
+  z-index: 100;
+}

@@ -1,13 +1,17 @@
+// var Josa = require("josa-js"); // require is not defined
+// import Josa from "josa-js"; //"josa-js". Relative references must start with either "/"
+// import Josa from "./josa-js"; // 몾찾아~
+
 //이름 주접
 function getNameJujeop(name) {
   let nameJujeop = {
     0: `${name}..승마장 \n출입금지당했어요...\n${name} 외모보면 \n말이 안나와서...`,
-    1: `${name}는 필히\n다리 조심해야돼\n 항상...\n legend니까..`,
+    1: `${name} 필히\n다리 조심해야돼\n 항상...\n legend니까..`,
     2: `${name}좋아하지마.\n-그게뭔데\n${name}좋아하지말라고\n-그거어떻게하는건데`,
     3: `${name} 불매.\n불같이 매입\n불만 있는척 매입\n 불닭 먹으면서 매입`,
-    4: `${name}가 \n이렇게 생겼는데\n본업을 이렇게나\n잘해도 되는거냐?  `,
+    4: `${name} \n이렇게 생겼는데\n본업을 이렇게나\n잘해도 되는거냐?  `,
     5: `${name} 귀엽다고\n생각하는 사람\n손들어했더니 \n지구가 성게모양 됨`,
-    6: `${name}가 \n너무 잘해서\n박수 쳤을뿐인데\n모기를 잡았다네요;`,
+    6: `${name} \n너무 잘해서\n박수 쳤을뿐인데\n모기를 잡았다네요;`,
   };
 
   return nameJujeop[~~(Object.keys(nameJujeop).length * Math.random())];
@@ -22,9 +26,8 @@ function getRealLongJujeop(name) {
     2: `${name}보면\n입이 안다물어져서\n 치과에서\n스카웃하면\n어쩌지😲`,
     3: `맨날\n예쁘다하니까\n세상이 ${name}거 같지?\n이제 곧\n우주도 ${name}거야`,
     4: `${name}땜에\n전쟁났어요.\n아름다워(war)\n귀여워(war)\n사랑스러워(war)`,
-    5: `👶:ㅇ..\n-아이가말을하려나봐요\n👶:ㅇ..\n-그래 엄마 해봐\n👶:${name}사랑해`,
-    6: `${name}은\n미술관 입장료\n내지마세요\n조각상은\n돈내는거 아닙니다.. `,
-    7: `${name}에대한\n객관적인비평?\n피드백?지양하시고\n 무조건적인 박수갈채\n편향적 응원 부탁`,
+    5: `${name}\n미술관 입장료\n내지마세요\n조각상은\n돈내는거 아닙니다.. `,
+    6: `${name}에대한\n객관적인비평?\n피드백?지양하시고\n 무조건적인 박수갈채\n편향적 응원 부탁`,
   };
   let tmplist = [];
   while (tmplist.length < 5) {
@@ -78,13 +81,6 @@ const jujeopName = (biasInfo) => {
 };
 
 /* ---------------------------------- 주접 세팅 --------------------------------- */
-biasInfo = {
-  lastName: "채",
-  firstName: "봉구",
-  color: "💖",
-  emoji: "🍑",
-  emojiName: "복숭아",
-};
 
 const whyCute = document.querySelector("#whyCute");
 const biasName = document.querySelector("#biasName");
@@ -96,7 +92,7 @@ const jujeopLong5 = document.querySelector("#jujeopLong5");
 const jujeopLong6 = document.querySelector("#jujeopLong6");
 const jujeopSymbol1 = document.querySelector("#jujeopSymbol1");
 const jujeopSymbol2 = document.querySelector("#jujeopSymbol2");
-const jujeopSymbol3 = document.querySelector("#jujeopSymbol3");
+// const jujeopSymbol3 = document.querySelector("#jujeopSymbol3");
 const jujeopType = document.querySelector("#jujeopType");
 const jujeopNormal = document.querySelector("#jujeopNormal");
 
@@ -125,3 +121,4 @@ function setJujeop(biasInfo) {
   )}`;
   // jujeopSymbol3.innerText = `${emoji.repeat(5)}`;
 }
+export { setJujeop };

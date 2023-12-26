@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Gowun+Dodum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@700&display=swap");
 p {
   margin: 0;
 }
@@ -11,9 +11,10 @@ body {
   overflow: hidden;
   text-align: center;
   background: rgb(221, 244, 250);
+  font-size: 10px;
 }
 
-.frame {
+.wrapper {
   width: 450px;
   background-color: rgba(255, 255, 255, 0.707);
   padding: 2rem;
@@ -22,9 +23,15 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1.3rem;
 }
 
+.setting-process {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.3rem;
+}
 & h1 {
   font-family: "Bagel Fat One", sans-serif;
   font-size: 3rem;
@@ -38,7 +45,7 @@ body {
 }
 
 & input[type="file"] {
-  background-color: red;
+  /* background-color: red; */
 }
 
 & button {
@@ -60,7 +67,8 @@ body {
   background: rgb(202, 202, 202);
 }
 
-& button.submit {
+& button.submit,
+& button.remake {
   background: rgb(0, 0, 0);
   border-radius: 30px;
   width: 150px;
@@ -106,10 +114,126 @@ body {
 
 /* 주접 프레임 */
 
-.wrapper {
-  display: flex;
+.result {
+  display: none;
+  text-align: center;
+  width: 400px;
+  height: 650px;
+}
+
+.frame-main {
   position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  width: 395px;
+  height: 610px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  .frame {
+    margin: 0;
+    width: 400px;
+  }
+  .jujeop {
+    position: absolute;
+    font-family: "Nanum Myeongjo";
+    font-weight: 900;
+    display:block;
+  }
+}
+.remake {
+  margin-top: 20px;
+}
+
+/* 주접 함 떨어볼게 내가..;;;   */
+.jujeop.name {
+  width: 100%;
+  font-size: 2.5rem;
+  top: 10px;
+  white-space: 3rem;
+}
+.jujeop.why-cute {
+  top: 235px;
+  left: 7px;
+  font-size: 12px;
+  text-align: center;
+}
+.jujeop.symbol1 {
+  top: 38px;
+  left: 10px;
+  font-size: 1.3rem;
+  transform: rotate(349deg);
+  z-index:10;
+}
+.jujeop.symbol2 {
+  font-size: 1.3rem;
+  right: 10px;
+  top: 2px;
+  z-index:10
+}
+.jujeop.long1 {
+  top: 119px;
+  left: 8px;
+  text-align:left;
+  font-size: 1.1em;
+}
+.jujeop.symbol3{
+  width:100%;
+  font-size:16px;
+  bottom:3px;
+  
+} 
+.jujeop.long2 {
+  font-size: 12px;
+  bottom: 120px;
+  left: 10px;
+  text-align: left;
+}
+.jujeop.long3 {
+  display: block;
+  right:8px;
+  bottom:275px;
+  width:130px;
+  font-size:11px;
+  text-align:right;
+  /* background-color:blue; */
+}
+
+.jujeop.long4{
+  bottom:6px;
+  font-size:8px;
+  left:10px;
+  text-align:left;
+  line-height:10px;
+}
+.jujeop.long5{
+  bottom:6px;
+  font-size:8px;
+  left:165px; line-height:10px;
+}
+.jujeop.long6{
+  bottom:6px;
+  font-size:8px;
+  right:8px;
+  text-align:right; 
+}
+.jujeop.normal {
+  display: block;
+  width: 80px;
+  height: 40px;
+  right: 8px;
+  bottom: 133px;
+  font-size: 11px;
+  text-align: right;
+}
+.jujeop.type {
+  display: block;
+  width: 80px;
+  height:50px;
+  top: 89px;
+  right: 8px;
+  text-align: right;
+  font-size:12px;
+  
 }
