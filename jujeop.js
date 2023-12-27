@@ -72,13 +72,13 @@ function getTypeJujeop(emoji, emojiName, lastName, firstName) {
 const jujeopName = (biasInfo) => {
   let tmpname = biasInfo.lastName + biasInfo.firstName;
   let fullName = [];
-  if (tmpname < 6) {
+  if (tmpname.length < 6) {
     for (let i = 0; i < tmpname.length * 2 + 1; i++) {
       i % 2 == 0
         ? fullName.push(biasInfo.color)
         : fullName.push(tmpname[~~(i / 2)]);
-      return fullName.join("");
     }
+    return fullName.join("");
   }
   return biasInfo.color + tmpname + biasInfo.color;
 };

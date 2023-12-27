@@ -1,4 +1,5 @@
 import { setJujeop } from "./jujeop.js";
+import html2canvas from "html2canvas";
 
 const lastName = document.querySelector("#lastname");
 const firstName = document.querySelector("#firstname");
@@ -7,9 +8,10 @@ const photo = document.querySelector("#photo");
 const frameColor = document.querySelector("#color");
 const frame = document.querySelector("#frame");
 const remake = document.querySelector("#remake");
+const toImg = document.querySelector("#toimg");
 
 //최애의 정보를 담는 객체
-let biasInfo = { emojiName: "강아지", emoji: "🐶" };
+let biasInfo = { emojiName: "강아지", emoji: "🐶", color: "🤍" };
 let 사진있냐 = false;
 
 //프레임을 씌울 사진을 받아와요
@@ -42,8 +44,9 @@ function getColor(e) {
 //프레임 색상 세팅
 function setFrame(e) {
   let color = getColor(e);
+  console.log(color);
   if (color) {
-    frame.src = `./../src/${color}-frame.png`;
+    frame.src = `${color}-frame.png`;
   }
 }
 
@@ -68,6 +71,9 @@ function makeFrame() {
     setJujeop(biasInfo);
     result.style.display = "block";
     settingProcess.style.display = "none";
+    html2canvas(document.querySelector(".frame-main")).then((canvas) => {
+      document.querySelector(".frame-main").replaceWith(canvas);
+    });
   }
 }
 

@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>내 최애 칭찬감옥에 가둬 😭</title>
 
-    <link rel="icon" type="image/x-icon" href="/src/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/public/favicon.svg" />
 
-    <script type="module" src="./main.js"></script>
-    <script type="module" src="./jujeop.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/jujeop.js"></script>
 
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body class="body">
     <div class="wrapper">
@@ -53,56 +53,26 @@
         <div class="concept">
           <div id="color">
             <p>프레임 색상</p>
-            <button type="button" class="color" id="blue" value="💙">💙</button>
-            <button type="button" class="color" id="purple" value="💜">
-              💜
-            </button>
-            <button type="button" class="color" id="pink" value="💖">💖</button>
-            <button type="button" class="color" id="white" value="🖤">
-              🤍
-            </button>
-            <button type="button" class="color" id="yellow" value="💛">
-              💛
-            </button>
-            <button type="button" class="color" id="green" value="💚">
-              💚
-            </button>
+            <button type="button" id="blue" value="💙">💙</button>
+            <button type="button" id="purple" value="💜">💜</button>
+            <button type="button" id="pink" value="💖">💖</button>
+            <button type="button" id="white" value="🖤">🤍</button>
+            <button type="button" id="yellow" value="💛">💛</button>
+            <button type="button" id="green" value="💚">💚</button>
           </div>
           <div class="emoji-type">
             <p>최애 닮은꼴</p>
-            <button type="button" class="moeh" data-name="갱쥐" value="🐶">
-              🐶
-            </button>
-            <button type="button" class="moeh" data-name="고양이" value="🐱">
-              🐱
-            </button>
-            <button type="button" class="moeh" data-name="토끼" value="🐰">
-              🐰
-            </button>
-            <button type="button" class="moeh" data-name="햄찌" value="🐹">
-              🐹
-            </button>
-            <button type="button" class="moeh" data-name="병아리" value="🐥">
-              🐥
-            </button>
-            <button type="button" class="moeh" data-name="복숭아" value="🍑">
-              🍑
-            </button>
-            <button type="button" class="moeh" data-name="딸기" value="🍓">
-              🍓
-            </button>
-            <button type="button" class="moeh" data-name="귤" value="🍊">
-              🍊
-            </button>
-            <button type="button" class="moeh" data-name="포도" value="🍇">
-              🍇
-            </button>
-            <button type="button" class="moeh" data-name="체리" value="🍒">
-              🍒
-            </button>
-            <button type="button" class="moeh" data-name="레몬" value="🍋">
-              🍋
-            </button>
+            <button type="button" data-name="갱쥐" value="🐶">🐶</button>
+            <button type="button" data-name="고양이" value="🐱">🐱</button>
+            <button type="button" data-name="토끼" value="🐰">🐰</button>
+            <button type="button" data-name="햄찌" value="🐹">🐹</button>
+            <button type="button" data-name="병아리" value="🐥">🐥</button>
+            <button type="button" data-name="복숭아" value="🍑">🍑</button>
+            <button type="button" data-name="딸기" value="🍓">🍓</button>
+            <button type="button" data-name="귤" value="🍊">🍊</button>
+            <button type="button" data-name="포도" value="🍇">🍇</button>
+            <button type="button" data-name="체리" value="🍒">🍒</button>
+            <button type="button" data-name="레몬" value="🍋">🍋</button>
           </div>
         </div>
         <button id="submit" class="submit">만들기</button>
@@ -123,9 +93,9 @@
 
           <span id="jujeopLong6" class="jujeop long6"></span>
           <span id="whyCute" class="jujeop why-cute"></span>
-          <img id="frame" class="frame" src="./../src/white-frame.png" alt="" />
+          <img id="frame" class="frame" src="/public/white-frame.png" alt="" />
         </div>
-
+        <!-- <button id="toimg">다운로드</button> -->
         <button id="remake" class="remake">다시 만들기</button>
       </div>
     </div>
