@@ -1,9 +1,7 @@
 ## 주접프레임
 
-| 내 최애 최고야 칭찬감옥에 가둬버려 😈
+| 내 최애 최고야 칭찬감옥에 가둬버려
 
-#### 추후 수정해야야될 부분...
+[😈 일단배포 ! 수정은 미래의 내가 ]("confine-to-complimentjail.netlify.app")
 
-- 아직 어색한 조사 ex)예준(이)보면 입이 안다물~
-- input 파일 스타일링..
-- html2canvas.. 화질이 원래 이렇게 구린가?
+[😈 개발로그 + 추후 개선방안 ]("https://localhost1029.notion.site/c1392b004ec24a4bace78e6defd8e7a9?pvs=4")

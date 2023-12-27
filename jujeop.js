@@ -53,7 +53,7 @@ function getRealLongJujeop(name) {
 
 // 타입 주접
 function getTypeJujeop(emoji, emojiName, lastName, firstName) {
-  let animals = ["강아지", "밤비", "토끼", "고양이", "병아리", "토끼", "햄찌"];
+  let animals = ["갱쥐", "밤비", "토끼", "고양이", "병아리", "토끼", "햄찌"];
   let animalJujeop = {
     0: `말랑말랑\n동글동글\n아기${emojiName}${emoji} `,
     1: `영재\n${emojiName}발굴단\n수석 졸업${emoji} `,
@@ -61,7 +61,7 @@ function getTypeJujeop(emoji, emojiName, lastName, firstName) {
   let fruitsJujeop = {
     0: `${emoji}${emojiName}에\n환불이\n어딨어${emoji}`,
     1: `인간 ${emojiName}\n${lastName + firstName}${emoji}`,
-    2: `우리집${emojiName}\n당도 최고\n${emoji}`,
+    2: `우리집${emojiName}\n당도 최고${emoji}`,
   };
   return animals.includes(emojiName)
     ? animalJujeop[~~(Object.keys(animalJujeop).length * Math.random())]
