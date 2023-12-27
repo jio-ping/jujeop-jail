@@ -40,9 +40,6 @@ body {
   border: 1px solid white;
   text-shadow: 1px 2px gray;
 }
-& input[type="file"] {
-  /* background-color: red; */
-}
 & button {
   font-family: "Gowun Dodum";
 }
