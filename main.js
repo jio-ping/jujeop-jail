@@ -1,4 +1,4 @@
-import { setJujeop } from "./getJujeop.js";
+import { setJujeop } from "./jujeop.js";
 
 const lastName = document.querySelector("#lastname");
 const firstName = document.querySelector("#firstname");
@@ -9,15 +9,17 @@ const frame = document.querySelector("#frame");
 const remake = document.querySelector("#remake");
 
 //최애의 정보를 담는 객체
-let biasInfo = {};
-let isMaking = true;
+let biasInfo = { emojiName: "강아지", emoji: "🐶" };
+let 사진있냐 = false;
 
 //프레임을 씌울 사진을 받아와요
 function getPhoto(e) {
   let fileSrc = window.URL.createObjectURL(e.target.files[0]);
+  console.log(e);
   document.querySelector(
     ".frame-main"
   ).style.backgroundImage = `url(${fileSrc})`;
+  사진있냐 = true;
 }
 //이름
 function getName() {
@@ -62,28 +64,15 @@ const result = document.querySelector("#result");
 const settingProcess = document.querySelector(".setting-process");
 //모든 항목이 포함되어야!!!!!!! 만들수있음
 function makeFrame() {
-  // if ((lastName.value == "") | (firstName.value == "")) {
-  //   console.log("이름을 모두 입력해주도록해 ");
-  //   return;
-  // }
-  if (isMaking) {
+  if (biasInfo.lastName && biasInfo.firstName && 사진있냐) {
     setJujeop(biasInfo);
     result.style.display = "block";
     settingProcess.style.display = "none";
-    isMaking = false;
   }
 }
 
 //다시만들기
-
-function remakeFrame() {
-  console.log(isMaking);
-
-  if (!isMaking) {
-    isMaking = true;
-    window.location.reload();
-  }
-}
+const remakeFrame = () => window.location.reload();
 
 submit.addEventListener("click", makeFrame);
 frameColor.addEventListener("click", setFrame);

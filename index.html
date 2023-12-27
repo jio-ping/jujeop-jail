@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko-kr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,9 +7,8 @@
 
     <link rel="icon" type="image/x-icon" href="/src/favicon.svg" />
 
-    <!-- <script src="./node_modules/josa-js/josa.js" type="module"></script> -->
     <script type="module" src="./main.js"></script>
-    <script type="module" src="./getJujeop.js"></script>
+    <script type="module" src="./jujeop.js"></script>
 
     <link rel="stylesheet" href="./style.css" />
   </head>
@@ -39,6 +38,7 @@
               class="name-input"
               type="text"
               placeholder="성 "
+              maxlength="2"
             />
             <input
               autocomplete="off"
@@ -46,6 +46,7 @@
               class="name-input"
               type="text"
               placeholder="이름"
+              maxlength="4"
             />
           </div>
         </div>
@@ -121,7 +122,6 @@
           <span id="jujeopLong5" class="jujeop long5"></span>
 
           <span id="jujeopLong6" class="jujeop long6"></span>
-          <span id="jujeopNormal" class="jujeop normal"></span>
           <span id="whyCute" class="jujeop why-cute"></span>
           <img id="frame" class="frame" src="./../src/white-frame.png" alt="" />
         </div>
